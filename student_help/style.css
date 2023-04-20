@@ -1,0 +1,342 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+
+.container {
+  padding: 100p, 10%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: #193eb8;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-text h1 span {
+  color: #193eb8;
+}
+
+
+
+
+
+
+
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #193eb8;
+  
+  
+}
+
+.menu li {
+  float: left;
+}
+
+.menu li a {
+  display: block;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #78c0c4;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  height: 500px;
+  background-image: "vr_top.jpeg";
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.middle {
+  height: 500px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img360  {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.last {
+  height: 500px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.model-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.model {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.model-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/*-----------models-------------*/
+
+#portfolio {
+  padding: 50px 0;
+  color: white;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 60px;
+
+} 
+
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #1109f5);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: #1109f5;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+.btn {
+  display: block;
+  margin: 80px auto;
+  width: fit-content;
+  border: 1px solid #1109f5;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #ff004f;
+}
+
+.student-activity-checker {
+  background-color: black;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  color: white;
+}
+
+.student-activity-checker h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.student-activity-checker form {
+  display: inline-block;
+  text-align: left;
+}
+
+.student-activity-checker form label {
+  display: inline-block;
+  width: 150px;
+}
+
+.student-activity-checker form select,
+.student-activity-checker form input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.student-activity-checker form button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.recommendations {
+  margin-top: 50px;
+}
+
+.recommendations h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.recommendations ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.recommendations li {
+  margin-bottom: 10px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #1254e1;
+  color: white;
+}
+
+.img-box{
+  width: 850px;
+  height: 500px;
+  margin: 0;
+}
+.rg{
+  flex-direction: right;
+}
+
+.chart-container {
+  flex-direction: right;
+  color: white;
+  position: relative;
+  height: 400px;
+  width: 800px;
+}

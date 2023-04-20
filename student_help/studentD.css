@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.subject {
+    flex-basis: 48%;
+    max-width: 48%;
+    height: 150px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.subject::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 20px solid #eee;
+    box-sizing: border-box;
+}
+.subject::after {
+    content: attr(data-percent) '%';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: normal;
+}
+.subject.math::before {
+    border-color: #ff9900;
+}
+.subject.math::after {
+    color: #13f3ac;
+}
+.subject.science::before {
+    border-color: #00ccff;
+}
+.subject.science::after {
+    color: #c71e2a;
+}
+.subject.history::before {
+    border-color: #ff66cc;
+}
+.subject.history::after {
+    color: #300df1;
+}
+.subject.quize::before {
+    border-color: #30de20;
+}
+.subject.quize::after {
+    color: #e325a7;
+}

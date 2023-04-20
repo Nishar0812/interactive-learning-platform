@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Activity Graph</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="studentD.css" >
+	<style>
+		.chart-container {
+			position: relative;
+			height: 400px;
+			width: 800px;
+    
+		}
+	</style>
+</head>
+<body>
+    <center>
+	<div class="chart-container">
+		<canvas id="activity-chart"></canvas>
+	</div>
+</center>
+
+
+
+
+    <h1><center>Student Activity Round Graph</center></h1>
+	<div class="container">
+        
+		<div class="subject math" data-percent="50"></div><h4>History</h4>
+		<div class="subject science" data-percent="90"></div><h4>Travel and AI friend</h4>
+		<div class="subject history" data-percent="90 "></div><h4>Science(Bio,Chemistry,Physics)</h4> 
+        <div class="subject quize" data-percent="95"></div><h4>AR/VR quize</h4>
+	</div>
+
+
+
+<center>
+<h1>Topic Recommender</h1>
+	<p>Based on your interests and past activity, we recommend the following more these topics:</p>
+    
+	<div id="topics"></div>
+</center>
+	<script>
+		var interests = ['Programming', 'History', 'Science'];
+		var activity = ['Programming', 'Science', 'quize', 'Art'];
+		var recommended = interests.filter(topic => !activity.includes(topic));
+		var topicsDiv = document.getElementById('topics');
+		recommended.forEach(topic => {
+			var topicDiv = document.createElement('div');
+			topicDiv.className = 'topic';
+			topicDiv.textContent = topic;
+			topicsDiv.appendChild(topicDiv);
+		});
+	</script>
+
+
+
+	<script>
+		var ctx = document.getElementById('activity-chart').getContext('2d');
+		var chart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: ['Subjects', 'Chemistry', 'History', 'AR/VR quize', 'Tourism', 'AI friend'],
+				datasets: [{
+					label: 'Activity',
+					data: [12, 19, 9, 20, 12, 20],
+					backgroundColor: 'rgba(255, 99, 132, 0.2)',
+					borderColor: 'rgba(255, 99, 132, 1)',
+					borderWidth: 2
+				}]
+			},
+			options: {
+				scales: {
+					y: {
+						beginAtZero: true
+					}
+				}
+			}
+		});
+	</script>
+</body>
+</html>
